@@ -8,7 +8,7 @@ namespace action
     {
         public override void RespondToInput(GameController controller)
         {
-            var playerCards = controller.player.Cards;
+            var playerCards = controller.player.cards;
 
             Debug.Log("--- Cards in inventory ---");
             foreach (var card in playerCards)

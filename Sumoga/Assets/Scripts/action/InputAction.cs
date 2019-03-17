@@ -5,7 +5,7 @@ namespace action
 {
     public abstract class InputAction
     {
-        public string Description;
+        public string description;
         public abstract void RespondToInput(GameController controller);
     }
 }

@@ -8,11 +8,12 @@ namespace action
     {
         public override void RespondToInput(GameController controller)
         {
-            var playerItems = controller.player.Inventory.Items;
+            var playerItems = controller.player.inventory.items;
 
             Debug.Log("--- Items in inventory ---");
             foreach (var item in playerItems)
-                Console.WriteLine($"{item} - {item.Description}");
+                Debug.Log(item + " - " + item.description);
+
             Debug.Log("--- --- ---");
         }
     }

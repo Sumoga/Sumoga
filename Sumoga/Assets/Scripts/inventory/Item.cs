@@ -4,21 +4,21 @@ namespace inventory
 {
     public class Item
     {
-        public string Id;
-        public string Name;
-        public string Description;
-        public List<ItemAttribute> Attributes;
+        public string id;
+        public string name;
+        public string description;
+        public List<ItemAttribute> attributes;
 
         public Item(string name, string description, List<ItemAttribute> attributes)
         {
-            Name = name;
-            Description = description;
-            Attributes = attributes;
+            this.name = name;
+            this.description = description;
+            this.attributes = attributes;
         }
 
         public override string ToString()
         {
-            return Name;
+            return name;
         }
     }
 }

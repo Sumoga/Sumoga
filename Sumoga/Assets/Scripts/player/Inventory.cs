@@ -6,7 +6,7 @@ namespace player
 {
     public class Inventory
     {
-        public List<Item> Items = new List<Item>();
+        public List<Item> items = new List<Item>();
 
         /// <summary>
         /// Checks if item is in this inventory
@@ -15,12 +15,12 @@ namespace player
         /// <returns>true if user is in this inventory, else false</returns>
         public bool Contains(string id)
         {
-            return Items.Any(item => item.Id == id);
+            return items.Any(item => item.id == id);
         }
 
         public void Add(Item item)
         {
-            Items.Add(item);
+            items.Add(item);
         }
     }
 }

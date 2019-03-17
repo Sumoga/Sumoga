@@ -6,12 +6,12 @@ namespace player
     public class Player
     {
         private Score _score;
-        public Inventory Inventory;
-        public List<Card> Cards = new List<Card>();
+        public Inventory inventory;
+        public List<Card> cards = new List<Card>();
 
         public Player(Inventory inventory, Score score)
         {
-            Inventory = inventory;
+            this.inventory = inventory;
             _score = score;
         }
     }

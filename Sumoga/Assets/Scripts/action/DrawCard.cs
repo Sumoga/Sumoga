@@ -12,7 +12,7 @@ namespace action
         {
             var newCard = card.Utils.GenerateRandomCard();
 
-            controller.player.Cards.Add(newCard);
+            controller.player.cards.Add(newCard);
             Debug.Log($"Player draws a card: {newCard}");
         }
     }
