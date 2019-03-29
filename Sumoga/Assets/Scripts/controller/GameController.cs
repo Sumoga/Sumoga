@@ -10,6 +10,7 @@ namespace controller
     {
         public Player player;
         private World _world;
+        private Shop _shop;
 
         public InputAction action;
 
@@ -25,6 +26,9 @@ namespace controller
             _world = new World(
                 new world.Score()
             );
+
+            var gameItems = inventory.Utils.LoadItems();
+            _shop = new Shop(gameItems);
         }
     }
 }

@@ -1,0 +1,48 @@
+{
+    "items": [
+        {
+            "id": "",
+            "name": "Sweater",
+            "description": "A checkered pattern sweater to keep me warm on rainy days",
+            "price": 100,
+            "greenEnergyChange": 0,
+            "happinessChange": 0,
+            "starsChange": 0,
+            "moneyChange": 0,
+            "worldHealthChange": 0,
+            "attributes": [
+                2
+            ]
+        },
+        {
+            "id": "",
+            "name": "Leather Backpack",
+            "description": "A durable, all purpose backpack for carrying my stuff around",
+            "price": 500,
+            "greenEnergyChange": 0,
+            "happinessChange": 0,
+            "starsChange": 0,
+            "moneyChange": 0,
+            "worldHealthChange": 0,
+            "attributes": [
+                2,
+                1
+            ]
+        },
+        {
+            "id": "",
+            "name": "Scooter",
+            "description": "On my scooter I can complete errands in no time",
+            "price": 10000,
+            "greenEnergyChange": 0,
+            "happinessChange": 0,
+            "starsChange": 0,
+            "moneyChange": -5,
+            "worldHealthChange": -1,
+            "attributes": [
+                0,
+                1
+            ]
+        }
+    ]
+}

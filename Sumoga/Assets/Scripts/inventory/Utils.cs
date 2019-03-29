@@ -1,4 +1,9 @@
+using System.Collections.Generic;
+using System.Linq;
 using player;
+using serialization;
+using UnityEditor;
+using UnityEngine;
 
 namespace inventory
 {
@@ -10,6 +15,12 @@ namespace inventory
             
 
             return inventory;
+        }
+
+        public static List<Item> LoadItems()
+        {
+            var json = AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/Json/items.json");
+            return JsonHelper.FromJson<Item>(json.text).ToList();
         }
     }
 }
