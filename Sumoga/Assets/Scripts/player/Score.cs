@@ -19,7 +19,7 @@
 
         // - earned every time you log in, do an investment, do a real-life activity
         // - spent on shopping
-        public int Money { get; set; } = 0;
+        public int money { get; set; } = 0;
 
         public int GreenEnergy
         {

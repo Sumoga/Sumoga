@@ -1,4 +1,3 @@
-using System;
 using action;
 using controller;
 using UnityEngine;
@@ -19,11 +18,8 @@ namespace input
 
         private void AcceptStringInput(string userInput)
         {
-            if (!IsInputValid(userInput))
-            {
-                InputInvalid();
+            if (string.IsNullOrEmpty(userInput))
                 return;
-            }
 
             var action = Utils.ConstructAction(userInput);
             action.RespondToInput(_controller);
@@ -31,27 +27,11 @@ namespace input
             InputComplete();
         }
 
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="userInput"> input string to check</param>
-        /// <returns>True if input is valid, false otherwise</returns>
-        private static bool IsInputValid(string userInput)
-        {
-            return !string.IsNullOrEmpty(userInput);
-        }
-
-        private void InputInvalid()
-        {
-            _controller.Log("Invalid input");
-            InputComplete();
-        }
-
         private void InputComplete()
         {
             _controller.DisplayLoggedText();
-            inputField.ActivateInputField();
             inputField.text = null;
+            inputField.ActivateInputField();
         }
     }
 }

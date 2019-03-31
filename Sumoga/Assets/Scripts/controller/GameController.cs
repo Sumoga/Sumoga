@@ -12,7 +12,7 @@ namespace controller
     {
         public Player player;
         private World _world;
-        private Shop _shop;
+        public Shop shop;
         public CardStack cardStack;
 
         /* on screen logging */
@@ -28,6 +28,8 @@ namespace controller
                 new Inventory(),
                 new Score()
             );
+            /* starting money */
+            player.score.money = 15000;
 
             // create a world
             _world = new World(
@@ -39,7 +41,7 @@ namespace controller
             cardStack = new CardStack(gameCards);
 
             var gameItems = inventory.Utils.LoadItems();
-            _shop = new Shop(gameItems);
+            shop = new Shop(gameItems);
         }
 
 

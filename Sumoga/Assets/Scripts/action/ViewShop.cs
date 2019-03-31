@@ -1,6 +1,5 @@
-using System;
+using System.Linq;
 using controller;
-using UnityEngine;
 
 namespace action
 {
@@ -8,7 +7,9 @@ namespace action
     {
         public override void RespondToInput(GameController controller)
         {
-            controller.Log("--- No items available in shop: ---");
+            controller.Log("--- Shop selection: ---");
+            controller.shop.selection.Each((item, i) =>
+                controller.Log($"#{i} ${item} - ${item.price}"));
             controller.Log("--- --- ---");
         }
     }

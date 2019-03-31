@@ -5,11 +5,11 @@ namespace world
 {
     public class Shop
     {
-        private List<Item> _selection;
+        public List<Item> selection;
 
         public Shop(List<Item> selection)
         {
-            _selection = selection;
+            this.selection = selection;
         }
     }
 }
