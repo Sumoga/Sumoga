@@ -10,10 +10,10 @@ namespace action
         {
             var playerCards = controller.player.cards;
 
-            Debug.Log("--- Cards in inventory ---");
+            controller.Log("--- Cards in inventory ---");
             foreach (var card in playerCards)
-                Debug.Log($"{card} - {card.Description}");
-            Debug.Log("--- --- ---");
+                controller.Log($"{card} - {card.Description}");
+            controller.Log("--- --- ---");
         }
     }
 }

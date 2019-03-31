@@ -8,9 +8,8 @@ namespace action
     {
         public override void RespondToInput(GameController controller)
         {
-            // TODO populate shop with options
-            Debug.Log("--- No items available in shop: ---");
-            Debug.Log("--- --- ---");
+            controller.Log("--- No items available in shop: ---");
+            controller.Log("--- --- ---");
         }
     }
 }

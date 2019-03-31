@@ -10,11 +10,11 @@ namespace action
         {
             var playerItems = controller.player.inventory.items;
 
-            Debug.Log("--- Items in inventory ---");
+            controller.Log("--- Items in inventory ---");
             foreach (var item in playerItems)
-                Debug.Log(item + " - " + item.description);
+                controller.Log($"{item} - {item.description}");
 
-            Debug.Log("--- --- ---");
+            controller.Log("--- --- ---");
         }
     }
 }

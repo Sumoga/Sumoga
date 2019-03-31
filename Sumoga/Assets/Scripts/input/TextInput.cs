@@ -43,13 +43,13 @@ namespace input
 
         private void InputInvalid()
         {
-            print("Input is invalid");
+            _controller.Log("Invalid input");
             InputComplete();
         }
 
         private void InputComplete()
         {
-//            _controller.DisplayLoggedText();
+            _controller.DisplayLoggedText();
             inputField.ActivateInputField();
             inputField.text = null;
         }
