@@ -12,7 +12,7 @@ namespace action
 
             controller.Log("--- Cards in inventory ---");
             foreach (var card in playerCards)
-                controller.Log($"{card} - {card.Description}");
+                controller.Log($"{card} - {card.description}");
             controller.Log("--- --- ---");
         }
     }

@@ -1,3 +1,9 @@
+using System.Collections.Generic;
+using System.Linq;
+using serialization;
+using UnityEditor;
+using UnityEngine;
+
 namespace card
 {
     public static class Utils
@@ -8,7 +14,14 @@ namespace card
         /// <returns>A random card</returns>
         public static Card GenerateRandomCard()
         {
-            return new WantBuyNewSweater(); // this is currently the only card
+            var card = LoadCards()[0];
+            return card;
+        }
+
+        public static List<Card> LoadCards()
+        {
+            var json = AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/Json/cards.json");
+            return JsonHelper.FromJson<Card>(json.text).ToList();
         }
     }
 }

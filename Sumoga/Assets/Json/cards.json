@@ -1,0 +1,13 @@
+{
+    "items": [
+        {
+            "name": "Want: A new sweater",
+            "description": "It's getting colder by the day and it's been a while since I got some new clothes",
+            "solveGreenEnergyChange": 0,
+            "solveHappinessChange": 0,
+            "solveStarsChange": 0,
+            "solveMoneyChange": 0,
+            "solveWorldHealthChange": 0
+        }
+    ]
+}

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using card;
 using player;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +13,7 @@ namespace controller
         public Player player;
         private World _world;
         private Shop _shop;
+        public CardStack cardStack;
 
         /* on screen logging */
         public Text displayText;
@@ -31,6 +33,10 @@ namespace controller
             _world = new World(
                 new world.Score()
             );
+
+            // initialize game card stack
+            var gameCards = card.Utils.LoadCards();
+            cardStack = new CardStack(gameCards);
 
             var gameItems = inventory.Utils.LoadItems();
             _shop = new Shop(gameItems);

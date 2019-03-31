@@ -10,10 +10,9 @@ namespace action
     {
         public override void RespondToInput(GameController controller)
         {
-            var newCard = card.Utils.GenerateRandomCard();
-
-            controller.player.cards.Add(newCard);
-            controller.Log($"Player draws a card: {newCard}");
+            var drawnCard = controller.cardStack.DrawCard();
+            controller.player.cards.Add(drawnCard);
+            controller.Log($"Player draws a card: {drawnCard.name}");
         }
     }
 }

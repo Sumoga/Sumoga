@@ -1,31 +1,36 @@
+using System;
+
 namespace card
 {
-    public abstract class Card
+    [Serializable]
+    public class Card
     {
-        // each Card object requires a unique identifier
-        public string Id;
-
         // each Card requires a human readable name and description to allow
         // player identify how to solve this need.
-        public abstract string Name { get; }
-        public abstract string Description { get; }
+        public string name;
+        public string description;
 
-        protected Card()
+        // elementary score changes applied on solving this card
+        public int solveGreenEnergyChange = 0;
+        public int solveHappinessChange = 0;
+        public int solveStarsChange = 0;
+        public int solveMoneyChange = 0;
+        public int solveWorldHealthChange = 0;
+
+        public Card(string name, string description)
         {
-            // TODO construct a method to assign random IDs to game entities
-            Id = "";
+            this.name = name;
+            this.description = description;
         }
 
-        protected Card(string id)
+        public bool Solve()
         {
-            Id = id;
+            return true;
         }
-
-        public abstract bool Solve();
 
         public override string ToString()
         {
-            return Name;
+            return name;
         }
     }
 }
