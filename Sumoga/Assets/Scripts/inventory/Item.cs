@@ -6,7 +6,7 @@ namespace inventory
     [Serializable]
     public class Item
     {
-        public string id;
+        public int id;
         public string name;
         public string description;
 

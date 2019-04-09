@@ -1,7 +1,7 @@
 {
     "items": [
         {
-            "id": "",
+            "id": 1,
             "name": "Sweater",
             "description": "A checkered pattern sweater to keep me warm on rainy days",
             "price": 100,
@@ -15,7 +15,7 @@
             ]
         },
         {
-            "id": "",
+            "id": 2,
             "name": "Leather Backpack",
             "description": "A durable, all purpose backpack for carrying my stuff around",
             "price": 500,
@@ -30,7 +30,7 @@
             ]
         },
         {
-            "id": "",
+            "id": 3,
             "name": "Scooter",
             "description": "On my scooter I can complete errands in no time",
             "price": 10000,
