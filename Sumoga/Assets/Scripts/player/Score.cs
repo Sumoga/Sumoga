@@ -1,11 +1,14 @@
-﻿namespace player
+﻿using System;
+
+namespace player
 {
     public class Score
     {
+        public event Action ScoreChange = () => { };
         // - spent by taking pro-environmental actions i.e. riding a bicycle (each time minus 1)
         // - recharges over time, with login, performing same actions, watching env. videos, purchasing it for money
         // - Max: 10.
-        private int _greenEnergy = 0;
+        private int _greenEnergy;
 
         // - percentage score
         // - affected by fulfilling/non-fulfilling wants
@@ -15,13 +18,13 @@
         // - Player experience score
         // - Increases with each action and login
         // - One of the conditions for level up
-        public int Stars { get; set; } = 0;
+        private int _stars;
 
         // - earned every time you log in, do an investment, do a real-life activity
         // - spent on shopping
-        public int money { get; set; } = 0;
+        private int _money;
 
-        public int GreenEnergy
+        public int greenEnergy
         {
             get { return _greenEnergy; }
             set
@@ -30,10 +33,11 @@
                     value = 10;
 
                 _greenEnergy = value;
+                ScoreChange();
             }
         }
 
-        public int Happiness
+        public int happiness
         {
             get { return _happiness; }
             set
@@ -45,6 +49,27 @@
                     value = 100;
 
                 _happiness = value;
+                ScoreChange();
+            }
+        }
+
+        public int stars
+        {
+            get { return _stars; }
+            set
+            {
+                _stars = value;
+                ScoreChange();
+            }
+        }
+
+        public int money
+        {
+            get { return _money; }
+            set
+            {
+                _money = value;
+                ScoreChange();
             }
         }
     }

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using card;
 using player;
+using ui;
 using UnityEngine;
 using UnityEngine.UI;
 using world;
@@ -23,13 +24,7 @@ namespace controller
         private void Awake()
         {
             Log("Welcome to Sumoga");
-            // create a player
-            player = new Player(
-                new Inventory(),
-                new Score()
-            );
-            /* starting money */
-            player.score.money = 15000;
+            InitPlayer();
 
             // create a world
             _world = new World(
@@ -42,6 +37,22 @@ namespace controller
 
             var gameItems = inventory.Utils.LoadItems();
             shop = new Shop(gameItems);
+        }
+
+        private void InitPlayer()
+        {
+            /* create a player */
+            player = new Player(
+                new Inventory(),
+                new Score()
+            );
+
+            /* attach event listener to update changes to UI */
+            var scoreUpdater = GetComponentInChildren<PlayerScoreUpdater>();
+            scoreUpdater.Init(player.score);
+
+            /* set starting money */
+            player.score.money = 15000;
         }
 
 
